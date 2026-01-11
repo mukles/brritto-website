@@ -1,4 +1,3 @@
-
 {
 	"$schema": "node_modules/wrangler/config-schema.json",
 	"name": "inno-brritto-web",
@@ -14,5 +13,11 @@
 	},
 	"observability": {
 		"enabled": true
-	}
+	},
+  "kv_namespaces": [
+    {
+      "binding": "BINDING_NAME",
+      "id": "3ebae19203f840e1b69b2797bd369d90"
+    }
+  ]
 }
