@@ -1,63 +1,16 @@
-/**
- * For more details on how to configure Wrangler, refer to:
- * https://developers.cloudflare.com/workers/wrangler/configuration/
- */
 {
-  "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "inno-brritto-web",
-  "main": ".open-next/worker.js",
-  "compatibility_date": "2025-03-01",
-  "compatibility_flags": ["nodejs_compat_v2", "global_fetch_strictly_public"],
-  "assets": {
-    "binding": "ASSETS",
-    "directory": ".open-next/assets",
-  },
-  "observability": {
-    "enabled": true,
-  },
-  "r2_buckets": [
-    {
-      "binding": "NEXT_INC_CACHE_R2_BUCKET",
-      "bucket_name": "inno-brritto-web-cache",
-    },
-  ],
-  "d1_databases": [
-    {
-      "binding": "NEXT_TAG_CACHE_D1",
-      "database_name": "inno-brritto-web-tags",
-      "database_id": "REPLACE_WITH_YOUR_DATABASE_ID",
-    },
-  ],
   "durable_objects": {
     "bindings": [
       {
-        "name": "NEXT_CACHE_DO_QUEUE",
-        "class_name": "DOQueueHandler",
+        "name": "BUCKET_CACHE_PURGE",
+        "class_name": "BucketCachePurge",
       },
     ],
   },
   "migrations": [
     {
       "tag": "v1",
-      "new_sqlite_classes": ["DOQueueHandler"],
-    },
-  ],
-  "services": [
-    {
-      "binding": "WORKER_SELF_REFERENCE",
-      "service": "inno-brritto-web",
-    },
-  ],
-  "kv_namespaces": [
-    {
-      "binding": "NEXT_INC_CACHE_KV",
-      "id": "TODO_REPLACE_WITH_KV_ID",
-    },
-  ],
-  "services": [
-    {
-      "binding": "WORKER_SELF_REFERENCE",
-      "service": "inno-brritto-web",
+      "new_sqlite_classes": ["BucketCachePurge"],
     },
   ],
 }
