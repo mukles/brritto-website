@@ -259,7 +259,14 @@ export default function SearchableSelect({
     ) {
       performSearch("");
     }
-  }, [isOpen, isApiMode, searchResults.length, isSearching, hasSearched, performSearch]);
+  }, [
+    isOpen,
+    isApiMode,
+    searchResults.length,
+    isSearching,
+    hasSearched,
+    performSearch,
+  ]);
 
   const handleSelect = (optionValue: string, optionLabel?: string) => {
     onChange(optionValue, optionLabel);

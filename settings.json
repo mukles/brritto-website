@@ -1,0 +1,263 @@
+{
+  // editor
+  "editor.fontSize": 16,
+  "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
+  "editor.tabSize": 2,
+  "editor.wordWrap": "on",
+  "editor.fontFamily": "Fira Code iScript",
+  "editor.fontLigatures": true,
+  "editor.linkedEditing": true,
+  "editor.accessibilitySupport": "off",
+  "editor.largeFileOptimizations": false,
+  "editor.inlineSuggest.enabled": true,
+  "editor.inlineSuggest.suppressSuggestions": true,
+  "editor.unicodeHighlight.includeStrings": false,
+  "editor.quickSuggestions": {
+    "other": true,
+    "comments": true,
+    "strings": true
+  },
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": [
+          "comment",
+          "keyword.control.import.js", // import
+          "keyword.control.export.js", // export
+          "keyword.control.from.js", // from
+          "storage.modifier", // static keyword
+          "storage.type.class", // class keyword
+          "storage.type.php", // typehints in methods keyword
+          "keyword.other.new.php", // new
+          "entity.other.attribute-name", // html attributes
+          "fenced_code.block.language.markdown" // markdown language modifier
+        ],
+        "settings": {
+          "fontStyle": "italic"
+        }
+      },
+      {
+        "scope": ["entity.name.type.class"],
+        "settings": {
+          "fontStyle": "bold"
+        }
+      },
+      {
+        "scope": ["entity.name.section.markdown"],
+        "settings": {
+          "fontStyle": "italic bold"
+        }
+      },
+      {
+        "scope": [
+          "invalid",
+          "keyword.operator",
+          "constant.numeric.css",
+          "keyword.other.unit.px.css",
+          "constant.numeric.decimal.js",
+          "constant.numeric.json",
+          "comment.block",
+          "entity.other.attribute-name.class.css"
+        ],
+        "settings": {
+          "fontStyle": ""
+        }
+      }
+    ]
+  },
+  // terminal
+  "terminal.integrated.fontFamily": "MesloLGS NF",
+   "terminal.integrated.profiles.windows": {
+    "Git Bash": {
+      "path": "C:\\Program Files\\Git\\bin\\bash.exe",
+      "icon": "terminal-bash"
+    }
+  },
+  "terminal.integrated.defaultProfile.windows": "Git Bash",
+  // cursor
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.cursorBlinking": "expand",
+  // workbench
+  "workbench.startupEditor": "none",
+  "workbench.trustedDomains.promptInTrustedWorkspace": true,
+  // git
+  "git.autofetch": true,
+  "git.confirmSync": false,
+  "git.enableSmartCommit": true,
+  "git.autorefresh": true,
+  // file explorer
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  // window
+  "window.commandCenter": true,
+  // emmet
+  "emmet.showSuggestionsAsSnippets": true,
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact",
+    "typescript": "typescriptreact"
+  },
+  // code formatting
+  "scss.lint.unknownAtRules": "ignore",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "javascript.inlayHints.parameterNames.enabled": "all",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "typescript.inlayHints.parameterNames.enabled": "all",
+  "editor.formatOnSave": false,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    // "source.organizeImports": "explicit",
+    "source.fixAll.eslint": "explicit",
+    "source.fixAll.tslint": "explicit"
+  },
+  "[html]": {
+    "editor.formatOnSave": true
+  },
+  "[css]": {
+    "editor.formatOnSave": true
+  },
+  "[scss]": {
+    "editor.formatOnSave": true
+  },
+  "[json]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.formatOnSave": true
+  },
+  "[javascriptreact]": {
+    "editor.formatOnSave": true
+  },
+  "[typescript]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[astro]": {
+    "editor.defaultFormatter": "astro-build.astro-vscode"
+  },
+  "[markdown]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+  },
+  "[toml]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "tamasfe.even-better-toml"
+  },
+  "[yaml]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "[liquid]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "sissel.shopify-liquid"
+  },
+  "[liquid-scss]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "sissel.shopify-liquid"
+  },
+  // PLUGIN: live server
+  "liveServer.settings.donotShowInfoMsg": true,
+  // PLUGIN: yaml
+  "redhat.telemetry.enabled": true,
+  // PLUGIN: git lens
+  "gitlens.advanced.messages": {
+    "suppressGitMissingWarning": true,
+    "suppressLineUncommittedWarning": true
+  },
+  // PLUGIN: code spell checker
+  "cSpell.language": "en,lorem",
+  "cSpell.enableFiletypes": [
+    "astro",
+    "dockercompose",
+    "dockerfile",
+    "liquid-javascript",
+    "liquid-scss",
+    "markdown_latex_combined",
+    "mdx",
+    "tailwindcss"
+  ],
+  "cSpell.userWords": [
+    "Astro",
+    "brevo",
+    "cgpa",
+    "Commerceplate",
+    "darkmode",
+    "dofollow",
+    "frontmatter",
+    "Gethugothemes",
+    "hugoplate",
+    "jamstack",
+    "keyof",
+    "lucide",
+    "markdownify",
+    "nextjs",
+    "nofollow",
+    "noopener",
+    "noreferrer",
+    "openai",
+    "PENDINGS",
+    "plainify",
+    "posthog",
+    "reduxjs",
+    "rehype",
+    "shadcn",
+    "Shortcode",
+    "shortcodes",
+    "sonner",
+    "Statichunt",
+    "subdir",
+    "tailwindcss",
+    "Teamosis",
+    "Themefisher",
+    "THRIVEDESK",
+    "titleify",
+    "udecode",
+    "Uihut",
+    "undos",
+    "Userlog",
+    "Webflow",
+    "webflows",
+    "webp",
+    "Zeon"
+  ],
+  // PLUGIN: codeium
+  "codeium.enableCodeLens": false,
+  // PLUGIN: gemini
+  "terminal.integrated.env.osx": {},
+  "gitlens.views.scm.grouped.views": {
+    "commits": true,
+    "branches": true,
+    "remotes": true,
+    "stashes": true,
+    "tags": true,
+    "worktrees": true,
+    "contributors": true,
+    "repositories": false,
+    "searchAndCompare": false,
+    "launchpad": true
+  },
+  "chat.editing.confirmEditRequestRemoval": false,
+  "github.copilot.advanced": {
+    "authProvider": "github"
+  },
+  "chat.commandCenter.enabled": false,
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "chat.agent.enabled": true,
+  "github.copilot.chat.languageContext.fix.typescript.enabled": true,
+  "github.copilot.chat.languageContext.inline.typescript.enabled": true,
+  "github.copilot.chat.languageContext.typescript.enabled": true,
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": true,
+    "scminput": false
+  },
+  "extensions.ignoreRecommendations": true,
+  "workbench.editor.empty.hint": "hidden",
+  "security.workspace.trust.untrustedFiles": "open",
+  "workbench.iconTheme": "material-icon-theme",
+}

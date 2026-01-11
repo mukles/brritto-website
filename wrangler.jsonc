@@ -14,10 +14,10 @@
 	"observability": {
 		"enabled": true
 	},
-  "kv_namespaces": [
-    {
-      "binding": "BINDING_NAME",
-      "id": "3ebae19203f840e1b69b2797bd369d90"
-    }
-  ]
+	"kv_namespaces": [
+		{
+			"binding": "NEXT_INC_CACHE_KV",
+			"id": "cd66c7da828b40ed8c6dba55dfdec61d"
+		},
+	],
 }
