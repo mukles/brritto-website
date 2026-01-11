@@ -30,7 +30,7 @@ export interface Course {
     categoryShortName: string;
   };
   // Additional fields from API
-  subject?: any[];
+  subject?: unknown[];
   isFree?: boolean;
 
   // Legacy fields for fallback support

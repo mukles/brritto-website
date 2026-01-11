@@ -139,7 +139,6 @@ export default function SearchableSelect({
   }, [isOpen, placement]);
 
   // Determine which options to display
-  const displayOptions = isApiMode ? searchResults : options;
 
   // Get the selected option's label or use saved selectedLabel for API mode
   const selectedOption = [...options, ...searchResults].find(
@@ -260,7 +259,7 @@ export default function SearchableSelect({
     ) {
       performSearch("");
     }
-  }, [isOpen, isApiMode, searchResults.length, isSearching, performSearch]);
+  }, [isOpen, isApiMode, searchResults.length, isSearching, hasSearched, performSearch]);
 
   const handleSelect = (optionValue: string, optionLabel?: string) => {
     onChange(optionValue, optionLabel);
