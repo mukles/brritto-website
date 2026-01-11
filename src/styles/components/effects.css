@@ -1,0 +1,112 @@
+/* Gradient Text Effects */
+.gradient-text {
+  background: linear-gradient(
+    135deg,
+    var(--brand-primary) 0%,
+    var(--accent-pink) 50%,
+    var(--accent-cyan) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-text-light {
+  --gradient-from: #b9bfda;
+  --gradient-to: #7882ab;
+
+  background: linear-gradient(
+    to right,
+    var(--gradient-from) 40%,
+    var(--gradient-to) 90%
+  );
+  background-clip: text;
+  color: transparent;
+}
+
+.gradient-text-primary {
+  background: linear-gradient(
+    135deg,
+    var(--brand-primary) 0%,
+    var(--accent-pink) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Glassmorphism Effects */
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.05),
+    0 10px 15px -3px rgba(0, 0, 0, 0.05),
+    0 0 0 1px rgba(255, 255, 255, 0.6) inset;
+}
+
+/* Modern Shadows */
+.shadow-soft {
+  box-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.02),
+    0 4px 8px rgba(0, 0, 0, 0.02),
+    0 8px 16px rgba(0, 0, 0, 0.02),
+    0 16px 32px rgba(0, 0, 0, 0.04);
+}
+
+.shadow-glow {
+  box-shadow:
+    0 0 20px rgba(133, 45, 254, 0.15),
+    0 0 40px rgba(133, 45, 254, 0.1),
+    0 0 60px rgba(133, 45, 254, 0.05);
+}
+
+.shadow-glow-hover:hover {
+  box-shadow:
+    0 0 30px rgba(133, 45, 254, 0.25),
+    0 0 60px rgba(133, 45, 254, 0.15),
+    0 0 90px rgba(133, 45, 254, 0.1);
+}
+
+/* Gradient Icon Background */
+.icon-gradient {
+  background: linear-gradient(
+    135deg,
+    var(--brand-primary) 0%,
+    var(--accent-pink) 100%
+  );
+}
+
+.icon-gradient-cyan {
+  background: linear-gradient(
+    135deg,
+    var(--accent-cyan) 0%,
+    var(--accent-indigo) 100%
+  );
+}
+
+/* Section Divider with Gradient */
+.section-divider {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--brand-primary),
+    var(--accent-pink),
+    transparent
+  );
+  height: 1px;
+}
+
+/* Blob Shapes */
+.blob {
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+}

@@ -1,0 +1,40 @@
+.btn-gradient {
+  background: linear-gradient(
+    135deg,
+    var(--brand-primary) 0%,
+    var(--accent-pink) 100%
+  );
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.btn-gradient::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    var(--accent-pink) 0%,
+    var(--brand-primary) 100%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+.btn-gradient:hover::before {
+  opacity: 1;
+}
+
+.btn-outline {
+  @apply transition-all duration-200;
+}
+
+.btn-outline::before {
+  @apply outline-gradient pointer-events-none absolute -inset-[1px] rounded-3xl transition-opacity duration-200 content-[""];
+}
+
+.btn-outline::after {
+  @apply bg-background pointer-events-none absolute inset-0 rounded-3xl content-[""];
+}

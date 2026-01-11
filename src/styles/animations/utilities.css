@@ -1,0 +1,168 @@
+/* Animated Gradient Background */
+.animated-gradient-bg {
+  background: linear-gradient(
+    -45deg,
+    #f8fafc,
+    #f1f5f9,
+    #e0e7ff,
+    #fce7f3,
+    #f0fdfa
+  );
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+}
+
+/* Float Animations */
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: float 6s ease-in-out infinite;
+  animation-delay: 2s;
+}
+
+.animate-float-slow {
+  animation: float 8s ease-in-out infinite;
+  animation-delay: 1s;
+}
+
+/* Pulse Glow Animation */
+.animate-pulse-glow {
+  animation: pulseGlow 3s ease-in-out infinite;
+}
+
+/* Shimmer Effect */
+.shimmer {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.4) 50%,
+    transparent 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+/* Blob Animation */
+.blob-animate {
+  animation: blobMorph 8s ease-in-out infinite;
+}
+
+/* Scale Up Animation */
+.animate-scale-up {
+  animation: scaleUp 0.5s ease-out forwards;
+}
+
+/* Fade In Up Animation */
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+/* Ripple Animation */
+.animate-ripple {
+  animation: ripple 0.6s ease-out;
+}
+
+/* Staggered animation delays */
+.animation-delay-100 {
+  animation-delay: 100ms;
+}
+.animation-delay-200 {
+  animation-delay: 200ms;
+}
+.animation-delay-300 {
+  animation-delay: 300ms;
+}
+.animation-delay-400 {
+  animation-delay: 400ms;
+}
+.animation-delay-500 {
+  animation-delay: 500ms;
+}
+
+@utility outline-gradient {
+  @apply bg-gradient-to-l from-[var(--color-gradient-from)]/70 from-0% via-[var(--color-gradient-via)]/70 via-30% to-[var(--color-gradient-to)]/70 to-100%;
+}
+
+.bg-gradient-gray {
+  @apply bg-gradient-to-b from-[var(--color-gradient-gray-from)]/[var(--gradient-gray-opacity)] to-[var(--color-gradient-gray-to)]/0;
+}
+
+.bg-divider {
+  background: linear-gradient(
+    90deg,
+    rgba(var(--divider-rgb1, 255, 255, 255), var(--divider-opacity1, 0)) 5.9%,
+    rgba(var(--divider-rgb2, 237, 236, 244), var(--divider-opacity2, 0.08))
+      14.4%,
+    rgba(var(--divider-rgb3, 255, 255, 255), var(--divider-opacity3, 0.08))
+      50.11%,
+    rgba(var(--divider-rgb2, 237, 236, 244), var(--divider-opacity2, 0.08))
+      85.56%,
+    rgba(var(--divider-rgb1, 255, 255, 255), var(--divider-opacity1, 0)) 94.33%
+  );
+}
+
+.bg-divider-vertical {
+  background: linear-gradient(
+    180deg,
+    rgba(var(--divider-rgb1, 255, 255, 255), var(--divider-opacity1, 0)) 5.9%,
+    rgba(var(--divider-rgb2, 237, 236, 244), var(--divider-opacity2, 0.08))
+      14.4%,
+    rgba(var(--divider-rgb3, 255, 255, 255), var(--divider-opacity3, 0.08))
+      50.11%,
+    rgba(var(--divider-rgb2, 237, 236, 244), var(--divider-opacity2, 0.08))
+      85.56%,
+    rgba(var(--divider-rgb1, 255, 255, 255), var(--divider-opacity1, 0)) 94.33%
+  );
+}
+
+.bg-divider-lg {
+  background: linear-gradient(
+    90deg,
+    rgba(var(--divider-lg-rgb1, 255, 255, 255), var(--divider-lg-opacity1, 0))
+      0.11%,
+    rgba(
+        var(--divider-lg-rgb2, 237, 236, 244),
+        var(--divider-lg-opacity2, 0.06)
+      )
+      3.76%,
+    rgba(
+        var(--divider-lg-rgb2, 237, 236, 244),
+        var(--divider-lg-opacity2, 0.06)
+      )
+      50.11%,
+    rgba(
+        var(--divider-lg-rgb2, 237, 236, 244),
+        var(--divider-lg-opacity2, 0.06)
+      )
+      96.28%,
+    rgba(var(--divider-lg-rgb1, 255, 255, 255), var(--divider-lg-opacity1, 0))
+      100%
+  );
+}
+
+.bg-divider-lg-vertical {
+  background: linear-gradient(
+    180deg,
+    rgba(var(--divider-lg-rgb1, 255, 255, 255), var(--divider-lg-opacity1, 0))
+      0.11%,
+    rgba(
+        var(--divider-lg-rgb2, 237, 236, 244),
+        var(--divider-lg-opacity2, 0.06)
+      )
+      3.76%,
+    rgba(
+        var(--divider-lg-rgb2, 237, 236, 244),
+        var(--divider-lg-opacity2, 0.06)
+      )
+      50.11%,
+    rgba(
+        var(--divider-lg-rgb2, 237, 236, 244),
+        var(--divider-lg-opacity2, 0.06)
+      )
+      96.28%,
+    rgba(var(--divider-lg-rgb1, 255, 255, 255), var(--divider-lg-opacity1, 0))
+      100%
+  );
+}
