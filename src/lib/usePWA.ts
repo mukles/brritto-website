@@ -16,18 +16,12 @@ export interface UsePWAReturn {
  */
 export function usePWA(): UsePWAReturn {
   const [isInstallable, setIsInstallable] = useState(false);
-  const [isInstalled, setIsInstalled] = useState(false);
-  const [offline, setOffline] = useState(false);
+  const [isInstalled, setIsInstalled] = useState(() => isPWAInstalled());
+  const [offline, setOffline] = useState(() => isOffline());
   const [installPrompt, setInstallPrompt] =
     useState<BeforeInstallPromptEvent | null>(null);
 
   useEffect(() => {
-    // Check if already installed
-    setIsInstalled(isPWAInstalled());
-
-    // Check initial offline status
-    setOffline(isOffline());
-
     // Listen for beforeinstallprompt event
     const handleBeforeInstallPrompt = (e: Event) => {
       e.preventDefault();

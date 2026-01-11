@@ -152,9 +152,7 @@ function mapWPPostToBlogPost(post: WPPost): BlogPost {
 
 export async function getPosts(
   page = 1,
-  perPage: number = blogConfig.pagination.postsPerPage,
-  orderby: "date" | "title" | "relevance" = "date",
-  order: "asc" | "desc" = "desc"
+  perPage: number = blogConfig.pagination.postsPerPage
 ): Promise<{ posts: BlogPost[]; totalPages: number }> {
   const result = await wpFetchWithMeta<WPPost[]>("/posts", {
     params: {
@@ -242,9 +240,7 @@ export async function getTagBySlug(slug: string): Promise<BlogTag | undefined> {
 export async function getPostsByTag(
   tagId: number,
   page = 1,
-  perPage: number = blogConfig.pagination.postsPerPage,
-  orderby: "date" | "title" | "relevance" = "date",
-  order: "asc" | "desc" = "desc"
+  perPage: number = blogConfig.pagination.postsPerPage
 ): Promise<{ posts: BlogPost[]; totalPages: number }> {
   const result = await wpFetchWithMeta<WPPost[]>("/posts", {
     params: {

@@ -2,6 +2,13 @@
  * PWA utilities for installation and offline status management
  */
 
+// Extend Navigator interface to include standalone property
+declare global {
+  interface Navigator {
+    standalone?: boolean;
+  }
+}
+
 export interface BeforeInstallPromptEvent extends Event {
   readonly platforms: string[];
   readonly userChoice: Promise<{
@@ -26,7 +33,7 @@ export function isPWAInstalled(): boolean {
 
   return (
     window.matchMedia("(display-mode: standalone)").matches ||
-    (window.navigator as any).standalone === true ||
+    window.navigator.standalone === true ||
     document.referrer.includes("android-app://")
   );
 }
