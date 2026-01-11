@@ -17,7 +17,7 @@ const nextConfig: NextConfig = {
       },
     ],
   },
-  redirects() {
+  async redirects() {
     return [
       {
         source: "/contact",
